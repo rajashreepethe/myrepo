@@ -13,6 +13,8 @@ namespace Plexus
                                                   userInterface.glassNum,
                                                   userInterface.totalWaterPoured);
             userInterface.OutputWaterPoured(waterCalculator.WaterInGlass);
+            Console.ReadKey();
+            
         }
         
     }

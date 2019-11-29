@@ -1,0 +1,36 @@
+Welcome to water calculator program
+
+Date: 29/11/2019
+Author: Plexus 
+
+This is the program that calculates water present in the glass 
+Glasses are arranged in the form of stack of triangular shape
+
+Prerequisites to run program:
+Program is written in C# .NET
+To run the executable, one needs to have .NET Core SDK installed on machine.
+It can be downloaded and installed from https://dotnet.microsoft.com/download
+
+
+Instructions to run the program:
+1) Install .NET SDK on machine
+2) Download Install folder
+3) Run plexus.exe file 
+4) Start giving input to program such as row number, glass number and total water poured
+5) Check if you can see output printed on console.
+
+Assumptions:
+Row Number and glass numbers start with 0 index
+If there are 3 rows, first row is 0th Row, user needs to input 0 as value
+Same applies for glasses
+
+Example:
+Sample output File is created inside install folder showing sample input and output
+
+Commands To build the code:
+Download the repository
+Add dotnet in PATH environment variable of system, it is installed at C:\Program Files\dotnet
+Open command prompt on windows
+Give command "dotnet build"
+To run the program "dotnet run"
+To execute test cases run "dotnet test"

@@ -11,7 +11,7 @@ namespace Plexus
         public void CalculateWaterInGlass(int rowNum, int glassNum, double totalWaterPoured)
         {
             double waterRemaining = totalWaterPoured;
-            Console.WriteLine(" Water Poured on glasses is {0} liters", totalWaterPoured);
+            Console.WriteLine(" \n Total Water Poured on glasses is {0} liters", totalWaterPoured);
 
             //Iterate the glass rows
             for(int currentRow = 0; ; currentRow ++)
@@ -21,26 +21,29 @@ namespace Plexus
                 if (waterRemaining > maxWaterRowCapacity)
                 {
                     //Water Overflow state
-                    Console.WriteLine(" Water accumulated in all glasses of Row {0}  is {1} liters", 
-                                    currentRow, MAX_GLASS_CAPACITY);
+                    Console.WriteLine(" Water accumulated in {0} glasses of Row {1}  is {2} liters", 
+                                      currentRow + 1, currentRow, MAX_GLASS_CAPACITY);
 
                     waterRemaining = waterRemaining - maxWaterRowCapacity;
-                    Console.WriteLine(" Remaining Water is {0} liters", waterRemaining);
+                    Console.WriteLine(" Remaining Water is {0} liters\n", waterRemaining);
 
                     if(rowNum == currentRow)
                     {
-                        WaterInGlass = MAX_GLASS_CAPACITY;
-                        break;
+                        WaterInGlass = MAX_GLASS_CAPACITY;                        
                     }                    
                 }
                 else
                 {
                     //Water finish state
+                    double waterInLastRow = waterRemaining/glassesInEachRow;
                     if(rowNum == currentRow)
                     {
-                        WaterInGlass = waterRemaining/glassesInEachRow;                        
+                        WaterInGlass = waterInLastRow;                        
                     }
+                    Console.WriteLine(" Water accumulated in {2} glasses of Row {0}  is {1} liters", 
+                                    currentRow, waterInLastRow.ToString("n2"), currentRow + 1);                   
                     waterRemaining = 0;
+                    Console.WriteLine(" Water is finished!\n");
                     break;
 
                 }

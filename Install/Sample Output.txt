@@ -1,0 +1,18 @@
+----------- Welcome to Water calculator---------
+Enter Row Number (int) : 2
+Enter Glass Number (int) : 0
+Enter Total Water Poured (Liters) : 1000
+
+ Total Water Poured on glasses is 1000 liters
+ Water accumulated in 1 glasses of Row 0  is 250 liters
+ Remaining Water is 750 liters
+
+ Water accumulated in 2 glasses of Row 1  is 250 liters
+ Remaining Water is 250 liters
+
+ Water accumulated in 3 glasses of Row 2  is 83.33 liters
+ Water is finished!
+
+ Result ==> Water Poured in Row 2 Glass 0 is 83.33 liters
+
+
