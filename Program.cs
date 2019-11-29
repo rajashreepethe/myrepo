@@ -6,12 +6,14 @@ namespace Plexus
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            UserInterface userInterface = new UserInterface();
+            userInterface.AskUser();
+            WaterCalculator waterCalculator = new WaterCalculator();
+            waterCalculator.CalculateWaterInGlass(userInterface.rowNum,
+                                                  userInterface.glassNum,
+                                                  userInterface.totalWaterPoured);
+            userInterface.OutputWaterPoured(waterCalculator.WaterInGlass);
         }
-
-        public int add(int a, int b)
-        {
-            return (a + b);
-        }
+        
     }
 }
